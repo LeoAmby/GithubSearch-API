@@ -1,0 +1,14 @@
+.form {
+    height:250px;
+}
+input {
+    border-radius: 10px;
+    width: 450px;
+    height:50px;
+    margin-top:50px;
+}
+button {
+    height:50px;
+    border-radius:5px;
+    padding:5px;
+}
