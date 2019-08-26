@@ -1,3 +1,5 @@
-<div class="form">
-    <input type="text" placeholder="Search" name="search" ><button (click)="onClick($event)">GO</button>
+<form class="form-inline" #searchForm='ngForm'>
+<div text-align:center>
+    <input type="text" placeholder="Search" name="search" [(ngModel)]=search><button (click)="onClick($event)">GO</button>
 </div>
+</form>
