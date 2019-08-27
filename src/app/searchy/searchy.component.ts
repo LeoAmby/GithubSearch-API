@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ChannelService } from '../channel/channel.service';
 
 @Component({
   selector: 'app-searchy',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchyComponent implements OnInit {
 
-  constructor() { }
+  constructor(public channelService: ChannelService) { }
 
   ngOnInit() {
   }
-
+searchy(searchTerm){
+    console.log(searchTerm)
+}
 }
