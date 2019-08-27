@@ -13,10 +13,17 @@ export class ChannelService {
 
   constructor( private http:HttpClient) { }
     searchy(searchTerm: string){
+      searchEndpoint = "'https://api.github.com/users/LeoAmby?access_token=' + apiKey
+      "
       let promise = new Promise((resolve, reject)=>{
          this.http.get('url').toPromise().then(
            (results)=>{
-             
+             console.log(results);
+             resolve();
+           },
+           (error)=>{
+             console.log(error);
+             reject()
            }
          )
       })
