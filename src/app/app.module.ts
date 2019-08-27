@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FormComponent } from './form/form.component';
 import { FormsModule } from '@angular/forms';
+import { SearchyComponent } from './searchy/searchy.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    FormComponent
+    FormComponent,
+    SearchyComponent
   ],
   imports: [
     BrowserModule,
