@@ -11,5 +11,14 @@ export class ChannelService {
   users:UserId;
   repos:any;
 
-  constructor() { }
+  constructor( private http:HttpClient) { }
+    searchy(searchTerm: string){
+      let promise = new Promise((resolve, reject)=>{
+         this.http.get('url').toPromise().then(
+           (results)=>{
+             
+           }
+         )
+      })
+    }
 }

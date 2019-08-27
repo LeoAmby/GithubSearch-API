@@ -7,8 +7,7 @@ import { ChannelService } from '../channel/channel.service';
   styleUrls: ['./searchy.component.css']
 })
 export class SearchyComponent implements OnInit {
-
-  constructor(public channelService: ChannelService) { }
+  constructor(public channelService:ChannelService) { }
 
   ngOnInit() {
   }

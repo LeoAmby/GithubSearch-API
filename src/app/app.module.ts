@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -12,13 +12,14 @@ import { SearchyComponent } from './searchy/searchy.component';
   declarations: [
     AppComponent,
     HeaderComponent,
-    FormComponent,
+    FormComponent, 
     SearchyComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule, 
 
   ],
   providers: [],
