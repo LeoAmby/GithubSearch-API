@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { UserId } from '../user-id';
 // import { Repositories } from '../repositories';
 import { HttpClient } from '@angular/common/http';
-
+import { APIKEY } from '../../environments/environment'
 @Injectable({
   providedIn: 'root'
 })
