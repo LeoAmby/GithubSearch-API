@@ -3,6 +3,7 @@ import { Userid } from '../user-id';
 //import { Repositories } from '../repositories';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../environments/environment';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -21,10 +22,9 @@ export class ChannelService {
          repositories:number;
       }
 
-      let searchEndpoint = "https://api.github.com/users/"+searchTerm+"?access_token="+environment.APIKEY;
+      let searchEndpoint = "";
       let promise = new Promise((resolve, reject)=>{
-        this.userid =[];
-         this.http.get<Repos>(searchEndpoint).toPromise().then(
+         this.http.get<Repos>("https://api.github.com/users/"+searchTerm+"?access_token="+environment.APIKEY).toPromise().then(
            (results)=>{
             console.log('readhere');
              this.userid = results;

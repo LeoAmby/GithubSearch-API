@@ -16,12 +16,14 @@ export class SearchyComponent implements OnInit {
   constructor(public channelService:ChannelService) { }
 
   ngOnInit() {
+    this.searchGit("LeoAmby")
   }
 
 searchGit(searchTerm){
     this.channelService.searchy(searchTerm).then(
       ()=>{
         this.userid=this.channelService.userid;
+        console.log(this.userid)
       },
       (error)=>{
         console.log(error)
