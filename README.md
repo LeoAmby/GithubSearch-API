@@ -12,7 +12,7 @@ The GithubSearch-API web up enables the user to enter desired search term throug
 
 ## Screenshot
 
-<img src="assets/screenshot.png" width="1000">
+<img src="./assets/screenshot.png" width="1000">
 
 ## Development server
 
