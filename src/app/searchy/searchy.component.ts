@@ -12,6 +12,6 @@ export class SearchyComponent implements OnInit {
   ngOnInit() {
   }
 searchy(searchTerm){
-    console.log(searchTerm)
+    this.channelService.searchy(searchTerm);
 }
 }
