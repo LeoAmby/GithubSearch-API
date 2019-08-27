@@ -1,10 +1,33 @@
-# Search
+# GithubSearch-API
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.1.
+
+## Author
+
+Leonidah Mwamto
+
+## Description
+
+The GithubSearch-API web up enables the user to enter desired search term through the form input. On hitting the go button, the app will display the contents from github which is used as the API key.
+
+## Screenshot
+
+<img src="assets/screenshot.png" width="1000">
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+## Technologies Used
+    i. Angular cli
+    i. Bootstrap
+    ii. HTML
+    
+## List of Contributors
+    Leonidah Mwamto
+    
+## Known Bugs
+  The emittter event is not capturing any content from the Api key
 
 ## Code scaffolding
 
