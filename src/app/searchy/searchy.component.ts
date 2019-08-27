@@ -1,17 +1,32 @@
 import { Component, OnInit } from '@angular/core';
 import { ChannelService } from '../channel/channel.service';
+import { Userid } from '../user-id';
+import {Repositories} from '../repositories';
 
 @Component({
   selector: 'app-searchy',
   templateUrl: './searchy.component.html',
   styleUrls: ['./searchy.component.css']
 })
+
 export class SearchyComponent implements OnInit {
+  userid:Userid;
+  repositories:Repositories;
+
   constructor(public channelService:ChannelService) { }
 
   ngOnInit() {
   }
-searchy(searchTerm){
-    this.channelService.searchy(searchTerm);
+
+searchGit(searchTerm){
+    this.channelService.searchy(searchTerm).then(
+      ()=>{
+        this.userid=this.channelService.userid;
+      },
+      (error)=>{
+        console.log(error)
+      }
+    )
 }
+
 }
