@@ -18,9 +18,13 @@ export class ChannelService {
     searchy(searchTerm: string){
 
       interface Repos{
-         username:string;
-         bio:string;
-         repositories:number;
+        avatar_url: string;
+        username: string;
+        login:string;
+        bio: string;
+        repos: number;
+        followers: number;
+        following: number;
       }
 
       let searchEndpoint = "";
@@ -39,3 +43,7 @@ export class ChannelService {
       return promise;
     }
 }
+
+// // repos(searchTerm){
+
+// }

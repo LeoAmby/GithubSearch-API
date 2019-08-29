@@ -29,8 +29,8 @@ searchGit(searchTerm){
       },
       (error)=>{
         console.log(error)
-      }
-    )
+      })
+      
 }
 
 }

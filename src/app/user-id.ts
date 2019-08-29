@@ -1,10 +1,11 @@
 export class Userid {
     constructor(
-        avatar_url: any,
-        username: string,
-        bio: string,
-        repos: number,
-        followers: number,
-        following: number,
+        public avatar_url: string,
+        public username: string,
+        public login:string,
+        public bio: string,
+        public repos: number,
+        public followers: number,
+        public following: number,
         ){}
 }
