@@ -2,6 +2,26 @@
     <app-header></app-header>
     </div>
 <div>
-    <app-form (emitSearch)="searchGit($event) "></app-form>
+    <app-form (emitSearch)="searchGit($event)"></app-form>
+    <!-- <app-results [userid]></app-results> -->
+    <div class="container" style="background-color:black; color:rgb(115, 119, 182)">
+        <div style="height:50px"></div>
+        <div class="row">
+            <div class="col-md-4">
+                    <img src="{{userid.avatar_url}}" alt="">
+                    <h1>{{userid.login}}</h1>
+            </div>
 
+        <div class="col-md-4">
+                <h3>BIO:</h3>
+                <p style="text-align:justify; margin-left:180px; color:lightgray">{{userid.bio}}</p>
+                <p>REPOSITORIES:{{userid.repos}}</p>
+                
+        </div>
+        <div class="col-md-4">
+            <!-- <p>{{userid.bio}}</p> -->
+            <p>FOLLOWERS: {{userid.followers}}</p>
+            <p>FOLLOWING: {{userid.following}}</p>
+        </div>
+    </div>
 </div>

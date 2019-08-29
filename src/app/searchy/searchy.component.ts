@@ -12,8 +12,9 @@ import {Repositories} from '../repositories';
 export class SearchyComponent implements OnInit {
   userid:Userid;
   repositories:Repositories;
+  username:string;
 
-  constructor(public channelService:ChannelService) { }
+  constructor(private channelService:ChannelService) { }
 
   ngOnInit() {
     this.searchGit("LeoAmby")
@@ -21,9 +22,10 @@ export class SearchyComponent implements OnInit {
 
 searchGit(searchTerm){
     this.channelService.searchy(searchTerm).then(
-      ()=>{
-        this.userid=this.channelService.userid;
-        console.log(this.userid)
+      (results)=>{
+        this.userid = this.channelService.userid;
+        console.log(this.userid);
+        
       },
       (error)=>{
         console.log(error)

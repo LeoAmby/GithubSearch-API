@@ -19,8 +19,4 @@ export class FormComponent implements OnInit {
   ngOnInit() {
   }
 
-  // onClick(event){
-  //   console.log(event)
-  // }
-
 }
