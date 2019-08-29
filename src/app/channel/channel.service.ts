@@ -11,7 +11,7 @@ import { environment } from '../../environments/environment';
 export class ChannelService {
 
   userid:Userid;
-  repos:any;
+  repos:Repositories;
 
   constructor( private http:HttpClient) { }
 
@@ -39,11 +39,31 @@ export class ChannelService {
              reject()
            }
          )
-      })
+      });
       return promise;
-    }
 }
 
-// // repos(searchTerm){
-
-// }
+reppy(searchTerm: string){
+  interface repy{
+     name: string;
+     description: string;
+     html_url: string;
+     repos: number;
+    created_at: Date;
+  }
+      let promise = new Promise((resolve, reject)=>{
+         this.http.get<repy>("https://api.github.com/users/"+searchTerm+"/repos?access_token="+environment.APIKEY).toPromise().then(
+           (results)=>{
+             this.repos = results;
+            //  console.log(results)
+             resolve();
+           },
+           (error)=>{
+             console.log(error);
+             reject()
+           }
+         )
+      });
+      return promise
+    }
+  }

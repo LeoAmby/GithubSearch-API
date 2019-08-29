@@ -4,7 +4,6 @@ export class Userid {
         public username: string,
         public login:string,
         public bio: string,
-        public repos: number,
         public followers: number,
         public following: number,
         ){}

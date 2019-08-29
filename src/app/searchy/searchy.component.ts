@@ -29,8 +29,18 @@ searchGit(searchTerm){
       },
       (error)=>{
         console.log(error)
-      })
-      
+      }
+    )
+    this.channelService.reppy(searchTerm).then(
+      (results)=>{
+         this.repositories = this.channelService.repos;
+         console.log(this.repositories)
+      },
+      (error)=>{
+        console.log(error)
+      }
+
+    )
 }
 
 }
